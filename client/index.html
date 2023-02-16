@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html style="font-size: 16px" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="sync" />
+    <meta name="twitter:title" content="Cloud — akkui" />
+    <meta
+      name="og:description"
+      content="Quick and fast temporary image cloud for you."
+    />
+    <meta
+      name="twitter:description"
+      content="Quick and fast temporary image cloud for you."
+    />
+    <title>Cloud — akkui</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/c9d2a740-4e55-4cf2-8bd0-4463e025e59e/upload_icon.png?v=1676516983710"
+    />
+    <link rel="stylesheet" href="nicepage/nicepage.css" media="screen" />
+    <link rel="stylesheet" href="nicepage/Home.css" media="screen" />
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="nicepage/jquery.js"
+      defer=""
+    ></script>
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="nicepage/nicepage.js"
+      defer=""
+    ></script>
+    <script src="index.js" defer></script>
+    <link
+      id="u-theme-google-font"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
+    />
+    <link
+      id="u-page-google-font"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700"
+    />
+
+    <meta name="theme-color" content="#478ac9" />
+  </head>
+
+  <body
+    data-home-page="index.html"
+    data-home-page-title="index"
+    class="u-body u-xl-mode"
+    data-lang="en"
+  >
+    <header class="u-clearfix u-grey-80 u-header u-header" id="sec-f08a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <a
+          id="upload_your_own_files"
+          style="display: none"
+          onclick="window.location.href = 'index.html'"
+          class="u-border-none u-btn u-btn-round u-button-style u-grey-80 u-hover-grey-80 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-1"
+          ><span class="u-file-icon u-icon u-icon-1"
+            ><img
+              src="https://cdn.glitch.global/c9d2a740-4e55-4cf2-8bd0-4463e025e59e/upload_icon.png?v=1676516983710"
+              alt="" /></span
+          >&nbsp;UPLOAD YOUR OWN IMAGE
+        </a>
+      </div>
+    </header>
+
+    <div id="first" style="display: none">
+      <section class="u-clearfix u-grey-80 u-section-1" id="sec-3f18">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <input
+            style="display: none"
+            type="file"
+            id="img_upload"
+            name="img_upload"
+            accept="image/*"
+          />
+          <h2 class="u-align-center u-text u-text-default u-text-1">
+            UPLOAD YOUR OWN IMAGE
+          </h2>
+          <center><p id="message_first" style="color: red"></p></center>
+          <div
+            class="u-container-style u-grey-90 u-group u-radius-10 u-shape-round u-group-1"
+          >
+            <div class="u-container-layout u-container-layout-1">
+              <p
+                id="file_name"
+                class="u-align-center u-text u-text-default u-text-2"
+              ></p>
+              <a
+                id="select_file"
+                onclick="selectImage()"
+                class="u-border-none u-btn u-button-style u-grey-80 u-hover-grey-80 u-btn-1"
+                >Select the Image</a
+              >
+              <a
+                id="upload_file"
+                onclick="uploadImage()"
+                style="display: none"
+                class="u-border-none u-btn u-button-style u-grey-80 u-hover-grey-80 u-btn-2"
+                >Upload the Image</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="second" style="display: none">
+      <section class="u-clearfix u-grey-80 u-section-2" id="sec-f1a2">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <center><h4 id="message_second" style="color: green"></h4></center>
+          <h2
+            id="image_preview_message"
+            style="visibility: visible"
+            class="u-text u-text-default u-text-palette-2-base u-text-1"
+          >
+            This image doesn't exist in the database.
+          </h2>
+          <img
+            id="image_preview"
+            style="visibility: hidden"
+            class="u-expanded-width u-image u-image-round u-radius-10 u-image-1"
+            src=""
+            alt=""
+          />
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
